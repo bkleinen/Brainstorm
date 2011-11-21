@@ -30,6 +30,9 @@ GEM
     activesupport (3.1.1)
       multi_json (~> 1.0)
     arel (2.2.1)
+    authlogic (3.0.3)
+      activerecord (>= 3.0.7)
+      activerecord (>= 3.0.7)
     builder (3.0.0)
     capybara (1.1.2)
       mime-types (>= 1.16)
@@ -147,6 +150,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  authlogic
   capybara
   coffee-rails (~> 3.1.1)
   haml-rails
