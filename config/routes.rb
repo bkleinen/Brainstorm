@@ -1,4 +1,6 @@
 Brain::Application.routes.draw do
+  resources :user_sessions
+
   resources :users
 
   # The priority is based upon order of creation:
