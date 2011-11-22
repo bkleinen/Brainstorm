@@ -19,19 +19,23 @@ require 'spec_helper'
 # that an instance is receiving a specific message.
 
 describe UsersController do
-
+setup :activate_authlogic
   # This should return the minimal set of attributes required to create a valid
   # User. As you add validations to User, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
     {:name => "John Doe", :email => "john@asdf.de", :login => "jdoe", :password => "geheim", :password_confirmation => "geheim"}
   end
-
+  before(:each) do
+     activate_authlogic
+     @logged_in_user = FactoryGirl.create(:logged_in_user)
+     FactoryGirl.create(:user_session)     
+   end
   describe "GET index" do
     it "assigns all users as @users" do
       user = User.create! valid_attributes
       get :index
-      assigns(:users).should eq([user])
+      assigns(:users).should eq([@logged_in_user,user])
     end
   end
 
