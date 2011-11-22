@@ -2,14 +2,7 @@ require 'spec_helper'
 
 describe "users/edit.html.haml" do
   before(:each) do
-    @user = assign(:user, stub_model(User,
-      :name => "MyString",
-      :email => "MyString",
-      :login => "MyString",
-      :persistence_token => "MyString",
-      :crypted_password => "MyString",
-      :password_salt => "MyString"
-    ))
+    @user = FactoryGirl.build(:user)
   end
 
   it "renders the edit user form" do
@@ -20,9 +13,7 @@ describe "users/edit.html.haml" do
       assert_select "input#user_name", :name => "user[name]"
       assert_select "input#user_email", :name => "user[email]"
       assert_select "input#user_login", :name => "user[login]"
-      assert_select "input#user_persistence_token", :name => "user[persistence_token]"
-      assert_select "input#user_crypted_password", :name => "user[crypted_password]"
-      assert_select "input#user_password_salt", :name => "user[password_salt]"
+      assert_select "input#user_password", :name => "user[password]"
     end
   end
 end

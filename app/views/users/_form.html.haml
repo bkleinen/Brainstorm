@@ -16,16 +16,7 @@
     = f.label :login
     = f.text_field :login
   .field
-    = f.label :persistence_token
-    = f.text_field :persistence_token
-  .field
-    = f.label :crypted_password
-    = f.text_field :crypted_password
-  .field
-    = f.label :password_salt
-    = f.text_field :password_salt
-  .field
-    = f.label :last_login_at
-    = f.datetime_select :last_login_at
+    = f.label :password
+    = f.password_field :password
   .actions
     = f.submit 'Save'
