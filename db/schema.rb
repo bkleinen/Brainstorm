@@ -11,12 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111128164739) do
+ActiveRecord::Schema.define(:version => 20111128194912) do
 
   create_table "brainstorms", :force => true do |t|
     t.string   "title"
     t.date     "date"
-    t.datetime "start"
+    t.time     "start"
     t.datetime "end"
     t.string   "description"
     t.integer  "no_people"
