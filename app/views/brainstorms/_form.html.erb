@@ -15,16 +15,12 @@
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </div>
-<!--
-  <div class="field">
-    <%= f.label :date %><br />
-    <%= f.date_select :date %>
-  </div>
--->
+
   <div class="field">
     <label for = "brainstorm_date">Date</label>
-    <input type ="date" name ="brainstorm[date]" id ="brainstorm_date"
-           value ="<%=Date.today.rfc3339%>">
+    <input type ="date" name ="brainstorm[date]" 
+           id ="brainstorm_date"
+           value = "<%=@brainstorm.date%>">
   </div>
 
   <div class="field"> 
@@ -45,14 +41,18 @@
   <div class="field">
     <%= f.label :no_people %><br />
     <%= f.number_field :no_people %>
-  </div>
+  </div
   <div class="field">
     <%= f.label :no_ideas %><br />
     <%= f.number_field :no_ideas %>
   </div>
-  <label for ="brainstorm_color">Background Color for this Brainstorm</label>
+
+  <label for ="brainstorm_color">
+	Background Color for this Brainstorm</label>
   <input type = "color" id = "brainstorm_color" 
-         name = "brainstorm[color]" value = "<%=@brainstorm.color%>">
+         name = "brainstorm[color]" 
+         value = "<%=@brainstorm.color%>">
+
   <div class="actions">
     <%= f.submit %>
   </div>
