@@ -17,6 +17,10 @@ end
 
 module Brain
   class Application < Rails::Application
+    # Added by the Rails HTML5 Boilerplate Template
+    # https://github.com/russfrisch/Rails-HTML5-Boilerplate-Template, written by Russ Frisch
+    config.action_view.javascript_expansions[:defaults] = %w(jquery rails plugins)
+  
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
