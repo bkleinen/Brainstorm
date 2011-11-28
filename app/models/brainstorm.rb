@@ -6,7 +6,16 @@ class Brainstorm < ActiveRecord::Base
      self.no_people ||= 6
      self.no_ideas ||= 3
      self.date ||= Date.today.rfc3339
-     self.start ||= Time.now
-     self.end ||= self.start.advance(:hours => 1)
+     time = Time.now
+     self.start ||= time_string(time)
+     self.end ||= time_string(time.advance(:hours => 1))
    end
+   
+private   
+   def time_string(time)
+     time.strftime("%H:%M")
+   end
+ 
+   
+     
 end

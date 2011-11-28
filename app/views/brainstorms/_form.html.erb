@@ -25,15 +25,17 @@
 
   <div class="field"> 
     <%= f.label :start %><br />
-    <input type ="datetime" id = "brainstorm_start" 
+    <input type ="time" id = "brainstorm_start" 
           name = "brainstorm[start]"
-           value ="<%=Time.now%>">
+           value ="<%= @brainstorm.start %>">
   </div>
-
-  <div class="field">
+  <div class="field"> 
     <%= f.label :end %><br />
-    <%= f.datetime_select :end %>
+    <input type ="time" id = "brainstorm_end" 
+          name = "brainstorm[end]"
+           value ="<%= @brainstorm.end %>">
   </div>
+  
   <div class="field">
     <%= f.label :description %><br />
     <%= f.text_area :description %>
@@ -46,12 +48,14 @@
     <%= f.label :no_ideas %><br />
     <%= f.number_field :no_ideas %>
   </div>
+  <div class="field">
 
   <label for ="brainstorm_color">
 	Background Color for this Brainstorm</label>
   <input type = "color" id = "brainstorm_color" 
          name = "brainstorm[color]" 
          value = "<%=@brainstorm.color%>">
+  </div>
 
   <div class="actions">
     <%= f.submit %>

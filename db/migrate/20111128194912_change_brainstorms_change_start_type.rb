@@ -1,6 +1,6 @@
 class ChangeBrainstormsChangeStartType < ActiveRecord::Migration
   def up
-    change_column(:brainstorms,:start,:time)
+    change_column(:brainstorms,:start,:string)
   end
 
   def down
