@@ -13,6 +13,19 @@
 
 ActiveRecord::Schema.define(:version => 20111128164739) do
 
+  create_table "brainstorms", :force => true do |t|
+    t.string   "title"
+    t.date     "date"
+    t.datetime "start"
+    t.datetime "end"
+    t.string   "description"
+    t.integer  "no_people"
+    t.integer  "no_ideas"
+    t.string   "color"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "ideas", :force => true do |t|
     t.string   "idea"
     t.datetime "created_at"
