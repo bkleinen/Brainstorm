@@ -1,4 +1,6 @@
 Brain::Application.routes.draw do
+  resources :ideas
+
   resources :user_sessions
 
   resources :users
