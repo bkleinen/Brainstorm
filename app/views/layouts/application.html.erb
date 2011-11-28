@@ -41,9 +41,10 @@ Welcome, <%=current_user.name%>! | <%= link_to "Edit Profile", edit_user_path(cu
    <%= link_to "Register", new_user_path %> | <%= link_to "Login", login_path%>
    <% end %>
   </header>
-
+  <div style="background-color: 
+   <%=@background_color?@background_color: 'white' %>">
   <%= yield %> <!--! end of #container -->
-
+  </div>
 
   <%= javascript_include_tag "application" %>
 

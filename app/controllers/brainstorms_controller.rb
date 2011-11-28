@@ -1,6 +1,7 @@
 class BrainstormsController < ApplicationController
   # GET /brainstorms
   # GET /brainstorms.json
+    
   def index
     @brainstorms = Brainstorm.all
 
@@ -14,7 +15,7 @@ class BrainstormsController < ApplicationController
   # GET /brainstorms/1.json
   def show
     @brainstorm = Brainstorm.find(params[:id])
-
+    @background_color = @brainstorm.color
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @brainstorm }
