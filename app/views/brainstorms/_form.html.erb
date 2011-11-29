@@ -46,7 +46,7 @@
   </div
   <div class="field">
     <%= f.label :no_ideas %><br />
-    <%= f.number_field :no_ideas %>
+    <%= f.range_field :no_ideas , :min => 1, :max => 5 %>
   </div>
   <div class="field">
 

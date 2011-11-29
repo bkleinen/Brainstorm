@@ -9,18 +9,7 @@
 %p
   %b Login:
   = @user.login
-%p
-  %b Persistence token:
-  = @user.persistence_token
-%p
-  %b Crypted password:
-  = @user.crypted_password
-%p
-  %b Password salt:
-  = @user.password_salt
-%p
-  %b Last login at:
-  = @user.last_login_at
+
 
 = link_to 'Edit', edit_user_path(@user)
 \|
