@@ -2,7 +2,8 @@
 
 %p
   %b Idea:
-  = @idea.idea
+  %span{:contenteditable => 'true', :id => 'idea'}
+    = @idea.idea 
 
 = link_to 'Edit', edit_idea_path(@idea)
 \|
